@@ -1,29 +1,44 @@
-const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    //Fazendo aparecer os itens
-    const navLinks = document.querySelectorAll('.nav-links li');
-    
-    //Fazendo o clique do menu funcionar
-    burger.addEventListener('click', ()=>{
-         nav.classList.toggle('nav-active');
-
-         //Animações links
-    navLinks.forEach((link, index) => { 
-        if(link.style.animation){
-            link.style.animation = '';
-        }else{
-            link.style.animation = `navlinkFade 0.5s ease forwards ${index/7+1.5}s`  
-
-        }
-    });
-    //Transformando em X
-    burger.classList.toggle('toggle');
-
-
-    });
-
-
-}
-
-navSlide();
+class MobileNavbar {
+    constructor(mobileMenu, navList, navLinks) {
+      this.mobileMenu = document.querySelector(mobileMenu);
+      this.navList = document.querySelector(navList);
+      this.navLinks = document.querySelectorAll(navLinks);
+      this.activeClass = "active";
+  
+      this.handleClick = this.handleClick.bind(this);
+    }
+  
+    animateLinks() {
+      this.navLinks.forEach((link, index) => {
+        link.style.animation
+          ? (link.style.animation = "")
+          : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`);
+      });
+    }
+  
+    handleClick() {
+      this.navList.classList.toggle(this.activeClass);
+      this.mobileMenu.classList.toggle(this.activeClass);
+      this.animateLinks();
+    }
+  
+    addClickEvent() {
+      this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+  
+    init() {
+      if (this.mobileMenu) {
+        this.addClickEvent();
+      }
+      return this;
+    }
+  }
+  
+  const mobileNavbar = new MobileNavbar(
+    ".mobile-menu",
+    ".nav-list",
+    ".nav-list li",
+  );
+  mobileNavbar.init();
