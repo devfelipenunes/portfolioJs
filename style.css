@@ -9,6 +9,180 @@
     padding: 0 80px;
     margin: auto;
 }
+nav
+{
+    display:flex;
+    position: fixed;
+    /*Jogar os itens para o canto da página*/
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    /*Mudando a cor de fundo do menu*/
+    background-color: black;
+    /*Fonte do menu*/
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    /*Mudando a cor da fonte do nome*/
+    color: white;
+    /*Deixando o texto formatado*/
+    /*Mudando o espaçamento das letras*/
+    letter-spacing: 5px;
+    /*Tamaho da letra*/
+    font-size:20px;
+}
+.logo .logo-cor{
+    color: white;
+    font-weight: 500;
+    
+}
+.logo .a .span{
+    color: red;
+}
+.nav-links{
+    /*Ajustando o tamanho e posição dos itens*/
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+}
+.nav-links li{
+    /*Sumindo com os pontos que ficavam nos itens*/
+    list-style: none;
+    margin-left: 15px;
+
+}
+.nav-links a{
+    /*Mudando a cor dos itens*/
+    color: white;
+    /*Mudando o espaçamento das letras dos itens*/
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.burger{
+    /*Não deixando o menu hambuguer visivel */
+    display:none;
+    /*aparecendo a maozinha quando clica no menu hambuguer*/
+    cursor: pointer;
+}
+.burger div{
+    /*Ajeitando o menu Hambuguer*/
+    width: 25px;
+    height: 3px;
+    background-color:white;
+    margin:5px;
+    transition: all 0.3s ease;
+}
+
+/* BOTÃO */
+.cta {
+    display: flex;
+    align-items: center;
+    color: white;
+    background: none;
+    border: none;
+    padding: 12px 18px;
+    position: relative;
+}
+.cta:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 4px));
+    width: 45px;
+    height: 45px;
+    background: blue;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0,0,.5,2), width .25s cubic-bezier(0,0,.5,2);
+    z-index: -1;
+}
+.cta:hover::before{
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0,0,.5,2), width .25s .25s cubic-bezier(0,0,.5,2);
+}
+.cta i {
+    margin-left: 5px;
+    transition:  transform .25s .4s cubic-bezier(0,0,.5,2);
+}
+.cta:hover i {
+    transform: translateX(3px);
+}
+/*Ajustando a altura*/
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+        color:white;
+    }
+}
+/*Ajustando a altura minima*/
+@media screen and (max-width:768px){
+    body{
+       overflow-x: hidden;
+    }
+    /*ajustando os itens para se adequar a altura min.*/
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top:8vh;
+        /*Arrumando o menu hambuguer*/
+        background-color: rgb(40, 113, 122);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        /*Ajeitando a transição parar abrir o menu hambuguer*/
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .nav-links a{
+        /*Mudando a cor dos itens*/
+        color: white;
+        /*Mudando o espaçamento das letras dos itens*/
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .burger{
+        /*para aparecer o menu hambuguer quando a tela tiver pequena*/
+        display: block;
+    }
+}
+/*Quando se clica no menu hambuguer, consegue abrir os itens*/
+.nav-active{
+    transform: translateX(0%);
+}
+/*Animações quando se clica no menu hamburguer*/
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+/*Transformando o menu em X*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+    
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*
 .navbar {
     position: fixed;
     width: 100%;
@@ -49,6 +223,7 @@
 .navbar .menu li a:hover{
     color: rgb(113, 113, 249);
 }
+*/
 .home{
     display: flex;
     background: url() no-repeat center;

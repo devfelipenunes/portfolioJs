@@ -1,17 +1,29 @@
-jQuery(document).ready(function(){
-    jQuery(window).scroll(function(){
-        if(this.scrollY > 20){
-            jQuery('.navbar').addClass("sticky");
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    //Fazendo aparecer os itens
+    const navLinks = document.querySelectorAll('.nav-links li');
+    
+    //Fazendo o clique do menu funcionar
+    burger.addEventListener('click', ()=>{
+         nav.classList.toggle('nav-active');
+
+         //Animações links
+    navLinks.forEach((link, index) => { 
+        if(link.style.animation){
+            link.style.animation = '';
         }else{
-            jQuery('.navbar').removeClass("sticky");
+            link.style.animation = `navlinkFade 0.5s ease forwards ${index/7+1.5}s`  
+
         }
     });
-    jQuery('.menu-btn').click(function(){
-        jQuery('.navbar .menu').toggleClass("active");
-        jQuery('.menu-btn i').toggleClass("active");
-    });
-});
+    //Transformando em X
+    burger.classList.toggle('toggle');
 
-jQuery(document).ready(function(){
-    console.log('Pronto')
-})
+
+    });
+
+
+}
+
+navSlide();
