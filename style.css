@@ -104,7 +104,6 @@ nav {
     cursor: pointer;
     display: none;
 }
-
 section{
     padding: 100px 0;
 }
@@ -125,6 +124,7 @@ section{
     margin-bottom: 60px;
     padding-bottom: 20px;
     position: relative;
+    align-self: centers;
 }
 .about .title::before{
     content: "";
@@ -185,6 +185,58 @@ section{
     height: 400px;
     object-fit: cover;
 }
+
+/*TECNOLOGIAS*/
+.tecnologias {
+    background-color: black;
+    color: white;
+    display: flex;
+}
+.tecnologias .title{
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.tecnologias .title::before {
+    background: #fff;
+}
+.tecnologias .title::after{
+    background: black;
+}
+.tecnologias .tecno-content {
+    display: flex;
+    justify-content:space-around;    
+}
+
+
+.tecnologias .tecno-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.tecnologias .tecno-content .card:hover {
+    background: blue;
+}
+.tecnologias .tecno-content .card .box {
+    transition: all 0.3s ease;
+}
+.tecnologias .tecno-content .card ion-icon{
+    font-size: 70px;
+    color: blue;
+}
+.tecnologias .tecno-content .card:hover ion-icon{
+    color: white;
+}
+.tecnologias .tecno-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
 @media (max-width: 1300px){
     .navbar .max-width{
         margin-left: 0;
@@ -253,6 +305,10 @@ section{
     .about .about-content .right {
         flex: 100%;
     }
+    .tecnologias .tecno-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 690px) {
@@ -264,6 +320,13 @@ section{
     }
     .home .home-content a {
         font-size: 20px;
+    }
+    .tecnologias .tecno-content .card{
+        width: 100%;
+    }
+    .tecnologias .tecno-content {
+        display: flex;
+        flex-direction: column; 
     }
 }
 
