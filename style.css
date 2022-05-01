@@ -318,13 +318,19 @@ section{
 /*PROJETOS*/
 .projetos {
     margin: 40px auto;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 20px;
-  grid-row-gap: 40px;
-  justify-content: center;
-  padding: 0 20px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    justify-content: center;
+    padding: 0 20px;
+}
+.projetos h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .projetos .projeto1 {
     background: yellow;
