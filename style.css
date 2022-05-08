@@ -6,7 +6,7 @@
 }
 .max-width{
     max-width: 1300px;
-    padding: 0 80px;
+    padding: 0 0px;
     margin: auto;
 }
 /*MENU*/
@@ -128,19 +128,31 @@
 }
 /*PARTICULAS*/
 #particles-js{
+    position: absolute;
     width: 100%;
     height: 100%;
     background: #000;
-    overflow: hidden;
+    z-index: -1;
 }
 /*HOME*/
 .home{
     display: flex;
+    padding: 0;
     background: url() no-repeat center;
+    width: 100%;
     height: 100vh;
     min-height: 500px;
     font-family: 'Courier New', Courier, monospace;
-
+    align-items: center;
+}
+.home .nome{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 8em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .home .max-width{
     margin: auto 0 auto 40px;
@@ -192,6 +204,10 @@
 section{
     padding: 100px 0;
 }
+/**/
+
+/*SOBRE MIM*/
+
 .about, .tecnologias{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -600,14 +616,8 @@ section{
 }
 
 @media (max-width: 690px) {
-    .home .home-content .text-2{
-        font-size: 60px;
-    }
-    .home .home-content .text-3{
-        font-size: 30px;
-    }
-    .home .home-content a {
-        font-size: 20px;
+    .home .nome {
+        font-size: 5em;
     }
     .tecnologias .tecno-content .card{
         width: 100%;

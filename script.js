@@ -52,5 +52,12 @@ menuToggle.onclick = function(){
   navigation.classList.toggle('active')
 }
 
-/*PROJETO/POKEMON*/
+/*HOME*/
+
+var headerBg =  document.getElementById('home')
+window.addEventListener('scroll', function(){
+  headerBg.style.opacity = 1 +window.pageXOffset/550+'';
+  headerBg.style.top = +window.pageXOffset+'px';
+  headerBg.style.backgroundPositionY = - +window.pageXOffset/2+'px';
+});
 
