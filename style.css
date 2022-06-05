@@ -303,4 +303,14 @@ border: 1px solid rgba(255, 255, 255, 0.86);
 }
 footer{
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .icons{
+    margin: 10px 0 10px 0;
+}
+footer .icons .bi{
+    margin-left: 10px;
+    color: white;
 }
