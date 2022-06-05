@@ -7,13 +7,13 @@
         <link rel="stylesheet" href="style.css">
         <title>Portfolio</title>
     </head>
-    <body>
+    <body >
         <!--MENU-->
         <header>
             <div class="navigation">
                 <div class="userBx">
                     <div class="imgBx">
-                        <img src="./src/Perfil.jpg" alt="" srcset="">
+                        <img src="./src/img/Perfil.png" alt="" srcset="">
                     </div>
                     <p class="username">Felipe Nunes</p>
                 </div>
@@ -26,73 +26,94 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
-            </header>
+        </header>
     <!--Home-->
-    <section class="home" id="home">
-        <div id="particles-js"></div>
-        <h1 class="nome">Felipe Nunes</h1>
-    </section>
-    <section name="sobreMim" class="about sec" id="about">
-        <div class="max-width">
-            <h2 class="title">Sobre</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="./src/Perfil.jpg" alt="">
-                </div>
-                <div class="column right">
-                    <div class="text">Dev Felipe Nunes <span>Programador Jr</span></div>
-                    <p>Tenho 23 anos, moro no Rio de Janeiro, trabalho na parte da tarde e de manhã e noite me dedico aos estudos, de tecnologias tanto front-end quanto back-end, sou fascinado pelo mundo da tecnologia, criativo e questionador, facilidade de absorver conhecimento durante meus estudos.
-                    </p>
-                    <br>
-                    <p>
-                        Estou a procura da primeira oportunidade!
-                    </p>
-                    <a href="/src/doc/Curriculo DevFelipeNunes.pdf" download>Baixar CV</a>
+        <section class="home">
+            <div class="container">
+                <div class="home-container">
+                    <h3>
+                        Apaixonado por Tecnologia
+                    </h3>
+                    <img class="perfil" src="./src/img/Perfil.png" alt="">
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section name="tecnologias" class="tecnologias" id="particles-js">
-        <div class="max-width">
-            <h2 class="title">Tecnologias</h2>
-            <div class="tecno-content">
-                <div class="card">
-                    <div class="box">
-                        <ion-icon name="code-slash-outline"></ion-icon>
-                        <div class="text">Front-End</div>
-                        <p>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="box">
-                        <ion-icon name="code-slash-outline"></ion-icon>
-                        <div class="text">Back-End</div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem odio repudiandae consectetur doloribus ut quod tempore quisquam reiciendis iusto explicabo voluptatum, dolorum est non laudantium ipsum, voluptates itaque, dicta officia</p>
-                    </div>
+        </section>
+        <section class="apresentacao">
+            <div class="container">
+                <h2 class="ola">
+                    Olá, me chamo Felipe!
+                </h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, ut fugiat asperiores vel minima perspiciatis voluptatem soluta numquam ea totam adipisci consequatur id a quis dolores eaque esse nesciunt! Fugiat!</p>
+                <div class="box-container">
+                        <div class="box">
+                            <div class="column">
+                                <figure></figure>
+                                <h2>Front-End</h2>
+                                <p>Estudos do front end bla bla bla bla</p>
+                                <span>Tecnologias</span>
+                                <p>HTML, CSS, Javascript</p>
+                            </div>
+                            <div class="column">
+                                <figure></figure>
+                                <h2>Back-End</h2>
+                                <p>Estudos do back-end end bla bla bla bla</p>
+                                <span>Tecnologias</span>
+                                <p>C#</p>
+                            </div>
+                        </div>
+                    <div class="algoAqui"></div>
                 </div>
             </div>
-        </div>
-    </section>
-    <script>
-        var ztxt = new Ztextify(".text-layers", {
-            depth: "30px",
-            layers: 8,
-            fade: true,
-            direction: "forwards",
-            event: "pointer",
-            eventRotation: "35deg"
-         });
-    </script>
+        </section>
+        <section class="projetos">
+            <div class="container">
+                <h2>Meus Projetos</h2>
+                <p>Descobrir novas formas de fazer a mesma coisa ou até mesmo a mesma coisa fazer de formas novas</p>
+                <div class="container-projetos">
+                    <div class="card-projetos">
+                        <div class="card box--teste">
+                            <div></div>
+                            <p>Senai-SP</p>
+                        </div>
+                        <div class="card">
+                            <figure>
+                                <img src="" alt="">
+                                <figcaption>
+
+                                </figcaption>
+                            </figure>
+                            <p>Senai-SP</p>
+                        </div><div class="card">
+                            <figure>
+                                <img src="" alt="">
+                                <figcaption>
+
+                                </figcaption>
+                            </figure>
+                            <p>Senai-SP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contato">
+                    <h2>Gostou dos meus projetos?</h2>
+                    <p>Estou em busca de conhecimento e novas experiencias</p>
+                    <button>Iniciar uma conversa</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <figure></figure>
+                <p>Vivendo, prendendo e se atualizando!</p>
+            </div>
+            <figure class="icon">
+                <img src="" alt="">
+            </figure>
+            <p>Feito por Dev Felipe Nunes</p>
+        </footer>
+    </body>
     <script src="script.js"></script>
     <script src="./particles.js"></script>
     <script src="./app.js"></script>
-    <script src="./src/js/ztext.js"></script>
-    <script src="./src/ztext.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </body>
 </html>
