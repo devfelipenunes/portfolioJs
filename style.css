@@ -414,4 +414,8 @@ footer .icons .bi{
     .projetos .container .contato h2{
         font-size: 25px;
     }
+    .projetos .container .container-projetos .apresentacao-projetos{
+        margin: 10px;
+    }
+
 }
