@@ -1,10 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
-@keyframes pisca {
-    0% {opacity: 0.2;}
-    50% {opacity: 1;}
-    100% {opacity: 0.2;}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:ital,wght@1,900&display=swap');
+
+
+@supports(scroll-snap-type: both mandatory) {
+    .no-support {
+      display: none;
+    }
+  }
+h1,h2,h3{
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: bold;
 }
-h1,h2,h3,p{
+p{
+    font-family: 'Roboto';
     text-align: center;
 }
 * {
@@ -298,7 +306,7 @@ body{
     flex-direction: column;
     display: flex;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     align-items: center;
 }
 .projetos .container .contato button{
@@ -306,7 +314,7 @@ body{
     font-size: 20px;
     padding: 30px;
     border-radius: 16px;
-    margin-top: 30px;
+    margin-top: 50px;
     background: rgba( 255, 255, 255, 0.3 );
     background: rgba( 255, 255, 255, 0.2 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -315,7 +323,6 @@ body{
     -webkit-backdrop-filter: blur( 15px );
     color: #020024;
     font-weight: bold;
-
 }
 .projetos .container .contato button:hover{
     cursor: pointer;
@@ -356,6 +363,7 @@ footer .icons .bi{
     .home .container .home-container .perfil{
         width: 85%;
         top: 100px;
+        scroll-snap-stop: normal;
     }
     .home .container .home-container h3{
         position: relative;
@@ -370,6 +378,7 @@ footer .icons .bi{
     }
     .apresentacao .container .ola h2{  
         font-size:29px;
+        margin-bottom: 10px;
     }
     .apresentacao .container .box-container {
         display: flex;
@@ -377,14 +386,15 @@ footer .icons .bi{
         overflow-x: auto;
         scrollbar-width: none;
         margin: 70px 0px;
+        width: 100vw;
     }
     .apresentacao .container .box-container .column{
+        padding: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0px 10px 10px 40px;
-        width: 100vh;
+        margin: 20px 20px 10px 30px;
     }
     .apresentacao .container .box-container .column .column-left{
         width: 100%;
@@ -392,6 +402,7 @@ footer .icons .bi{
         border-right: none;
         margin-bottom: 20px;
         padding-bottom: 20px;
+        width: 200px;
     }
     .apresentacao .container .box-container .column .column-right{
         width: 100%;
@@ -400,5 +411,7 @@ footer .icons .bi{
         margin: 0px 3px;
         width: 350px;
     }
-
+    .projetos .container .contato h2{
+        font-size: 25px;
+    }
 }
