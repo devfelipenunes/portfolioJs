@@ -208,15 +208,14 @@ body{
     flex-direction: column;
     align-items: center;
 }
-.apresentacao .container .ola{
+.apresentacao .container .ola h2{
     font-size: 50px;
     margin-top: 20px;
     margin-bottom:10px ;
     color: white;
 }
-.apresentacao .container p{
+.apresentacao .container .ola p{
     text-align: center;
-    width: 80%;
     color: white;
 }
 .apresentacao .container .box-container{
@@ -358,7 +357,7 @@ footer .icons .bi{
         font-size: 15px;
     }
     .home{
-        height: 550px;
+        height: 500px;
     }
     .home .container .home-container .perfil{
         width: 85%;
