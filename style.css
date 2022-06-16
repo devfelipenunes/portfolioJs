@@ -202,6 +202,7 @@ body{
 }
 .apresentacao .container .ola{
     font-size: 50px;
+    margin-top: 20px;
     margin-bottom:10px ;
     color: white;
 }
@@ -237,6 +238,9 @@ body{
     align-items: center;
     flex-direction: column;
     border-right: 1px solid white;
+}
+.apresentacao .container .box-container .column .column-left h3{
+    font-size: 40px;
 }
 .apresentacao .container .box-container .column .column-right{
     width: 50%;
@@ -288,6 +292,7 @@ body{
 }
 .projetos .container h2{
     padding-top: 50px;
+    font-size: 50px;
 }
 .projetos .container .contato{
     flex-direction: column;
@@ -346,11 +351,11 @@ footer .icons .bi{
         font-size: 15px;
     }
     .home{
-        height: 430px;
+        height: 550px;
     }
     .home .container .home-container .perfil{
         width: 85%;
-        top: 60px;
+        top: 100px;
     }
     .home .container .home-container h3{
         position: relative;
@@ -358,14 +363,19 @@ footer .icons .bi{
         font-size: 40px;
     }
     .apresentacao .container .ola{  
-        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .apresentacao .container .ola h2{  
+        font-size:29px;
     }
     .apresentacao .container .box-container {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
         scrollbar-width: none;
-        width: 100vw;
         margin: 70px 0px;
     }
     .apresentacao .container .box-container .column{
@@ -374,6 +384,7 @@ footer .icons .bi{
         justify-content: center;
         align-items: center;
         margin: 0px 10px 10px 40px;
+        width: 100vh;
     }
     .apresentacao .container .box-container .column .column-left{
         width: 100%;
