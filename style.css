@@ -4,7 +4,9 @@
     50% {opacity: 1;}
     100% {opacity: 0.2;}
 }
-
+h1,h2,h3,p{
+    text-align: center;
+}
 * {
     margin: 0;
     padding: 0;
@@ -16,23 +18,16 @@ span{
     color: rebeccapurple;
     text-align: center;
 }
-h2, h3{
-    text-align: center;
-    font-size: 50px;
-    color: #020024;
-}
+
 p{
-    font-size: 25px;
     text-align: center;
     color: white;
 }
 span{
-    font-size: 30px;
     color: blue;
     text-align: center;
 }
 body{
-    background-color: blue;
 }
 .max-width{
     max-width: 1300px;
@@ -177,7 +172,7 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.home .container .home-container h3{
+.home .container .home-container h2{
     position: relative;
     top: 90px;
     text-align: center;
@@ -215,38 +210,35 @@ body{
     width: 80%;
     color: white;
 }
-.apresentacao .container .box-container .box{
+.apresentacao .container .box-container{
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    margin-top: 50px;
 }
-.apresentacao .container .box-container .box .column{
+.apresentacao .container .box-container .column{
     background: rgba(255, 255, 255, 0.48);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.7px);
     -webkit-backdrop-filter: blur(2.7px);
     border: 1px solid rgba(255, 255, 255, 0.86);
-    padding: 50px;
-    margin-top: 50px;
-    margin-bottom: 15px;
-    margin-left: 100px;
-    margin-right: 100px;
+    border-radius: 100px;
+
     display: flex;
     align-items: center;
-    flex-direction: row;
-    border-radius: 100px;
+
+    margin: 50px;
+    padding: 50px;
+    width: 100%;
 }
-.apresentacao .container .box-container .box .column .column-left{
+.apresentacao .container .box-container .column .column-left{
     width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
     border-right: 1px solid white;
 }
-.apresentacao .container .box-container .box .column .column-right{
+.apresentacao .container .box-container .column .column-right{
     width: 50%;
     margin-left: 30px;
 }
@@ -365,32 +357,37 @@ footer .icons .bi{
         top: 20px 0px;
         font-size: 40px;
     }
-    .apresentacao .container .box-container .box .column{
-        width: 100%;
-        padding: 130px;
-    }
     .apresentacao .container .ola{  
         font-size: 40px;
     }
-    .apresentacao .container .box-container .box .column{
-        width: 300px;
-        height: 500px;
-        padding: 10px;
+    .apresentacao .container .box-container {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scrollbar-width: none;
+        width: 100vw;
+        margin: 70px 0px;
+    }
+    .apresentacao .container .box-container .column{
         display: flex;
         flex-direction: column;
-        margin: 50px 0px;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px 10px 40px;
     }
-    .apresentacao .container .box-container .box .column .column-left{
+    .apresentacao .container .box-container .column .column-left{
+        width: 100%;
         border-bottom: 1px solid white;
         border-right: none;
-        
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    .apresentacao .container .box-container .column .column-right{
+        width: 100%;
     }
     .projetos .container{
         margin: 0px 3px;
         width: 350px;
-    }
-    .apresentacao .container .box-container {
-        margin-top:70px ;
     }
 
 }
